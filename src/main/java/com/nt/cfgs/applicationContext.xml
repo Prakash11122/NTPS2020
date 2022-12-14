@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+     
+     
+     <bean id="baseCar" class="com.nt.beans.car" abstract="true">
+     <property name="model" value="swift"/>
+     <property name="engineCC" value="700"/>
+       <property name="company" value="maruty"/>
+         <property name="owner" value="prakash"/>
+         <property name="type" value="Business"/>
+           <property name="fuelType" value="pretol"/>
+     
+     </bean>
+     
+     
+     <bean id="prakashcar1" class="com.nt.beans.car" parent="baseCar">
+     <property name="regNo" value="88888888"/>
+     <property name="engineNo" value="fJDU67676767"/>
+     <property name="color" value="Black"/>
+     
+     
+     </bean>
+     
+      <bean id="prakashcar2" class="com.nt.beans.car" parent="baseCar">
+     <property name="regNo" value="7777777777"/>
+     <property name="engineNo" value="fJDU89999999"/>
+     <property name="color" value="red"/>
+     
+     
+     </bean>
+
+</beans>
